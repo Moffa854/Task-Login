@@ -28,20 +28,21 @@ class TaskLOgin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        useInheritedMediaQuery: true,
-        locale: DevicePreview.locale(context),
-        builder: DevicePreview.appBuilder,
-        debugShowCheckedModeBanner: false,
-        title: 'Task Login',
-        theme: ThemeData(
-          primaryColor: ColorApp.whitePink,
-          useMaterial3: true,
-          scaffoldBackgroundColor: ColorApp.lightPink,
-          appBarTheme: const AppBarTheme(
-            backgroundColor: ColorApp.lightPink,
-          ),
+      useInheritedMediaQuery: true,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
+      debugShowCheckedModeBanner: false,
+      title: 'Task Login',
+      theme: ThemeData(
+        primaryColor: ColorApp.whitePink,
+        useMaterial3: true,
+        scaffoldBackgroundColor: ColorApp.lightPink,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: ColorApp.lightPink,
         ),
-        home: LoginPage());
+      ),
+      home: _handleAuthState(),
+    );
   }
 
   Widget _handleAuthState() {
